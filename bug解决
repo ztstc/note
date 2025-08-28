@@ -1,0 +1,5 @@
+## For frame [laser]: Fixed Frame [] does not exist
+
+https://blog.csdn.net/qq_42636264/article/details/138148252
+
+如果发现激光雷达的/scan坐标变换同urdf设置没有生效，检查激光雷达驱动发布的frame_id 是否为laser_link 如果不是，修改激光雷达驱动的launch文件<param name="frame_id" type="string" value="laser_link"/><!--frame_id设置-->

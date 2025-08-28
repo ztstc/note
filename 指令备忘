@@ -1,0 +1,26 @@
+roslaunch rosbridge_server rosbridge_websocket.launch
+roslaunch ros_uart_protocol launch_node.launch
+source devel/setup.bash
+npm dev run
+修改结束后，运行下面两条指令，之后每次修改，都要运行一下。
+catkin_make_isolated --install --use-ninja
+source install_isolated/setup.bash
+
+//梯子
+cd ~/clash
+./clash -d .
+
+base_link坐标 -- 机器人本体的坐标系 如果以base_link作为fixed frame 那么这个地图永远不会动 因为机器人相对自己是静止的
+odom坐标系 --里程计相对于原点（启动时）的位置
+
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+
+ROS 永久设置source的方法
+https://blog.csdn.net/Electrical_IT/article/details/108377703
+
+使用手柄控制小车
+roscore
+rosrun joy joy_node
+rosrun teleop_twist_joy teleop_node
+
+
